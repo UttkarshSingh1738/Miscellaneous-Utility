@@ -44,19 +44,52 @@ This script classifies short text headlines into different categories using a ne
 
 ### `Fabric_Defect.py`
 
-**Description**: This script is used for detecting defects in fabric images. (Include specific details about the functionality once reviewed.)
+This script detects defects in fabric images using image processing techniques. It performs the following tasks:
+
+1. **Image Preprocessing**: Converts the image to grayscale, applies median blur, and performs adaptive thresholding.
+2. **Morphological Operations**: Applies morphological closing and dilation to enhance defect contours.
+3. **Defect Detection**: Finds and highlights defects based on contour area, drawing circles around detected defects.
+
+**Usage:**
+1. Place your fabric image in the specified path or modify `image_path` to point to your image.
+2. Run the script to detect and visualize fabric defects:
+
+    ```bash
+    python Fabric_Defect.py
+    ```
 
 ### `Tesseract-OCR.py`
 
-**Description**: Utilizes Tesseract OCR to extract text from images. (Include specific details about the functionality once reviewed.)
+This script uses Tesseract OCR to extract text from images and convert it to speech. It performs the following tasks:
+
+1. **OCR Text Extraction**: Reads an image and extracts text using Tesseract OCR.
+2. **Text-to-Speech Conversion**: Converts the extracted text to speech using Google Text-to-Speech (gTTS) and plays the audio.
+
+**Usage:**
+1. Ensure Tesseract OCR is installed and modify the path to the Tesseract executable if needed.
+2. Place your image in the specified path or modify `image_path` to point to your image.
+3. Run the script to extract text and hear it spoken:
+
+    ```bash
+    python Tesseract-OCR.py
+    ```
 
 ### `WebScraping.py`
 
-**Description**: Performs web scraping to collect data from websites. (Include specific details about the functionality once reviewed.)
+This script performs web scraping to collect data from a specified website. It performs the following tasks:
+
+1. **Fetch Web Pages**: Retrieves HTML content from a series of web pages.
+2. **Extract Titles and Content**: Parses the HTML to extract titles and specific sections of text.
+3. **Save Results**: (Commented out) Writes the extracted content to a text file.
+
+**Usage:**
+1. Modify the URL pattern and number of chapters if needed.
+2. Run the script to fetch and process web page content:
+
+    ```bash
+    python WebScraping.py
+    ```
 
 ## Setup and Requirements
 
-Ensure you have the required Python packages installed. You can use pip to install them:
-
-```bash
-pip install numpy pandas matplotlib scikit-learn keras tensorflow pandas_datareader tflearn
+Ensure you have the required Python packages installed. You can use pip to install them.
